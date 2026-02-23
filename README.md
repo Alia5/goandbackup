@@ -2,12 +2,15 @@
 
 TODO
 
+
 ## Usage
 
 Run `./goandbackup --help`
 
 See: sample.config.json  
 By default config.(json|yaml|toml) next to the executable is loaded.
+
+Can be used in conjuction with something like [Syncthing](https://syncthing.net/) to sync the backups to offsite machines.
 
 ## License
 
