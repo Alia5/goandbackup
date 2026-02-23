@@ -1,0 +1,15 @@
+module github.com/Alia5/goandbackup
+
+go 1.26
+
+require (
+	github.com/alecthomas/kong v1.14.0
+	github.com/alecthomas/kong-toml v0.4.0
+	github.com/alecthomas/kong-yaml v0.2.0
+)
+
+require (
+	github.com/kr/text v0.2.0 // indirect
+	github.com/pelletier/go-toml v1.9.5 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)

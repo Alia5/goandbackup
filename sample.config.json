@@ -1,0 +1,50 @@
+{
+    "backups": [
+        {
+            "name": "webshop-backup",
+            "daysToKeep": 7,
+            "outDir": "~/backups/webshop",
+            "srcFiles": [
+                "/srv/http/webshop/uploads",
+                "/srv/http/webshop/config",
+                "/srv/http/webshop/.env"
+            ],
+            "sqlDump": {
+                "engine": "postgres",
+                "host": "localhost",
+                "port": 5432,
+                "user": "backup_user",
+                "password": "backup_password",
+                "database": "webshop_db"
+            }
+        },
+        {
+            "name": "other-backup",
+            "daysToKeep": 7,
+            "outDir": "~/backups/other",
+            "srcFiles": [
+                "/srv/http/other"
+            ]
+        },
+        {
+            "name": "only-database-backup",
+            "daysToKeep": 14,
+            "outDir": "~/backups/dbonlybackup",
+            "sqlDump": {
+                "engine": "mysql",
+                "host": "localhost",
+                "port": 3306,
+                "user": "someUser",
+                "password": "backup_password",
+                "database": "backthisup_db"
+            }
+        },
+        {
+            "name": "generic-command-backup",
+            "daysToKeep": 10,
+            "outDir": "~/backups/generic",
+            "_note": "sqlDumpCmd must print SQL to stdout; this app writes stdout to a .sql file automatically.",
+            "sqlDumpCmd": "pg_dump -U USERNAME -d DATABASE_NAME -h HOST -p PORT"
+        }
+    ]
+}
